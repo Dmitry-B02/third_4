@@ -10,35 +10,21 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import com.example.second_lab.databinding.ActivityThirdBinding
 
-class ThirdActivity : AppCompatActivity() {
+class ThirdActivity : AbstractClass() {
     private lateinit var binding: ActivityThirdBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityThirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.toFirst.setOnClickListener{
+        binding.bnToFirst.setOnClickListener{
             toFirst()
         }
-        binding.toSecond.setOnClickListener{
+        binding.bnToSecond.setOnClickListener{
             toSecond()
         }
         binding.button.setOnClickListener{
             toThird()
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.options_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return if (item.itemId == R.id.about_item) {
-            startActivity(Intent(this, AboutActivity::class.java))
-            true
-        } else
-            super.onOptionsItemSelected(item)
     }
 
     private fun toFirst() {

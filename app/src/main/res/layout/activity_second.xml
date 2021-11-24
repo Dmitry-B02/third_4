@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".SecondActivity">
+        tools:context=".SecondActivity"
+        android:id="@+id/fragment2">
 
         <TextView
             android:id="@+id/text"
@@ -24,7 +25,7 @@
             />
 
         <Button
-            android:id="@+id/to_first"
+            android:id="@+id/bnToFirst"
             android:text="@string/to_first"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent=".60"
@@ -35,14 +36,14 @@
             android:layout_marginTop="50dp" />
 
         <Button
-            android:id="@+id/to_third"
+            android:id="@+id/bnToThird"
             android:text="@string/to_third"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent=".60"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/to_first"
+            app:layout_constraintTop_toBottomOf="@id/bnToFirst"
             android:layout_marginTop="50dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

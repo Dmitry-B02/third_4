@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:id="@+id/fragment1">
 
         <TextView
             android:id="@+id/text"
@@ -23,7 +24,7 @@
             android:layout_marginTop="20dp"
             />
         <Button
-            android:id="@+id/to_second"
+            android:id="@+id/bnToSecond"
             android:text="@string/to_second"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent=".60"
